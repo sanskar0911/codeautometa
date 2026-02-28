@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: allocateai-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    disk:
+      name: sqlite-data
+      mountPath: /data
+      sizeGB: 1 
